@@ -1,0 +1,9 @@
+line 
+line2
+line3 >>echofile2.CSV
+
+echo -e single line >echofile3.java
+echo >echofile4.c
+echo asmita ujgare echofile5.txt
+asmita ujgare echofile5.txt
+echo -e line nline2nline3

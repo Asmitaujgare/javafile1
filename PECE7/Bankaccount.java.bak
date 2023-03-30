@@ -1,0 +1,101 @@
+import java.util.Scanner;
+class Bankaccount
+{
+String accountHolderName; 
+long accountno;
+double Bal;
+int gpswd;
+int upigpay;
+int ppay;
+int upipay;
+Scanner sc=new Scanner(System.in);
+	
+Bankaccount(String s1,long a1, double d1, int p1, int p2, int p3,int p4)
+	{
+	accountHolderName=s1;
+	accountno=a1;
+	Bal=d1;
+	gpswd=p1;
+	upigpay=p2;
+	ppay=p3;
+	upipay=p4;
+	
+	}
+
+	public void gpay()
+	{
+		System.out.println("enter a googlepaypswd");
+		int pswd=sc.nextInt();
+		if(pswd==gpswd)
+		{
+			System.out.println("1.check balance 2.send money");
+			int option=sc.nextInt();
+				if(option==1)
+			{
+				checkBalance();
+			}
+			else if(option==2)
+			{
+				System.out.println("enter a contact number");
+				long contactnumber=sc.nextlong();
+				System.out.println("enter a money");
+				double money=sc.nextDouble();
+				if(money<Bal)
+				{
+					System.out.println("enter upi googlepswd");
+					int upi=sc.nextInt();
+					if(upi==upigpay)
+					{
+						Bal=Bal-money;
+						System.out.println("transcation sucessful");
+					}
+					else
+					{
+						System.out.println("invalid pin");
+					}
+				}
+				else
+				{
+					System.out.println("insufficient funds");
+
+				}
+			}
+			else
+			{
+				System.out.println("server is busy");
+			}
+		}
+		else
+		{
+			System.out.println("invalid pin");
+		}
+		
+
+	}
+	public void ppay()
+	{
+
+	}
+	public void checkBalance()
+	{
+		System.out.println("enter upi pin");
+		int upicb=sc.nextInt();
+		if(upicb==upigpay||upicb==upipay)
+		{
+			System.out.println(Bal);
+		}
+		else
+		{
+			System.out.println("incorrect pin");
+		}
+
+	}
+
+		
+
+
+
+
+
+	}
+

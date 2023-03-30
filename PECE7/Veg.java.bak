@@ -1,0 +1,9 @@
+class Veg extends Food
+{
+	Veg(String name, int qty)
+
+	{
+		super(nmae,qty);
+		this.name=name;
+		this.qty=qty;
+	}

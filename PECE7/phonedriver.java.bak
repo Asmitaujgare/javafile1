@@ -1,0 +1,28 @@
+import java.util.Scanner;
+class phoneDriver
+{
+	public static void main(Sting[] args)
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter name of phone");
+		String s1=sc.next();
+		System.out.println("enter price of phone");
+		double price=sc.nextDouble();
+		phone p=new phone(s1,price);
+		for(;;)
+		{
+			System.out.println("1.insert sim 2.remove sim 3.exit");
+			int options=sc.nextInt();
+			switch(options)
+			{
+				case 1:p.insertSim();
+				break;
+				case 2:p.removeSim();
+				break;
+				case 3: System.exit(2);
+
+
+} 
+}	
+	
+
